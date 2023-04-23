@@ -26,7 +26,7 @@
           <div #swiperRef="" class="swiper mySwiper">
             <div class="swiper-wrapper">
               <!-- the first slide -->
-              <div class="swiper-slide"> 
+              <div class="swiper-slide" data-toggle="modal" data-target="#slide1-modal"> 
                 <div class="slide-content">
                   <div class="slide-content-mainImg">
                     <img src="./imags/slide1-main.PNG"/>
@@ -41,11 +41,11 @@
                       LinkDev
                     </p>
                     <p class="slide-content-words-intro">
-                      The Ultimate Link Collection Website for IT Professionals, and it is a revolutionary new platform for IT professionals
+                      The Ultimate Link Collection Website for IT, and it is a new platform for IT engineers
                     </p>
                   </div>
 
-                  <div class="slide-content-button slide-content-button-viewable" data-toggle="modal" data-target="#slide1-modal">
+                  <div class="slide-content-button slide-content-button-viewable">
                     <div class="slide-content-button-grey">
                       <p>
                         View Product
@@ -134,57 +134,94 @@
       <div class="cover-right"></div>
 
       <!-- Slide1-Modal -->
-<div class="modal fade" id="slide1-modal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
- 
-      <!-- modal head -->
-      <div class="modal-header">
-        <h4 class="modal-title">The Title<ul class="list-inline">
-          <!-- <li class="list-inline-item"></li>
-          <li class="list-inline-item"></li>
-          <li class="list-inline-item"></li> -->
-        </ul></h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="modal fade" id="slide1-modal">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h4 class="modal-title">The Title<ul class="list-inline">
+              </ul></h4>
+              <button type="button" class="close" data-dismiss="modal">X</button>
+            </div>
+
+
+            <!-- modal main body -->
+              <div class="modal-body">
+                <div class="modal-real-content">
+                  <div class="modal-real-content-firstPic">
+                    <img src="./imags/modal-1.png"/>
+                  </div>
+
+                  <div class="modal-real-content-intro">
+                    <p class="modal-real-content-intro-title">
+                      Introducing LinkDev: The Ultimate Link Collection Website for IT Professionals: 
+                    </p>
+                    <p class="modal-real-content-intro-content">
+                      LinkDev is a revolutionary new platform for IT professionals, created from scratch by Ekpyrotic Universe from October to December 2022. It's a link collection website designed specifically for developers and devops, as well as anyone working in the IT industry.
+                    </p>
+                    <p class="modal-real-content-intro-content">
+                      With LinkDev, all IT professionals can collect all their personal websites, projects, portfolios, Github, UI designs, and more, all in one place. When someone clicks on a LinkDev link from an external website, they will be directed to the user's profile on LinkDev, which includes their title, name, contact information, personal experience, all the links they want to share, and their own uploaded avatar and profile background.
+                    </p>
+                    <p class="modal-real-content-intro-content">
+                      Users can easily edit and manage their links on the LinkDev website, adding thumbnails and choosing the visibility of their links. LinkDev's main feature is to increase the exposure and connectivity of IT professionals. On the developers page, any user can see all currently registered and open IT professionals' contact information and profiles, helping recruiters to find the right candidates.
+                    </p>
+                  </div>
+
+                  <div class="modal-real-content-firstVideo">
+
+                  </div>
+
+                  <div class="modal-real-content-goals">
+                    <p class="modal-real-content-goals-title">Goals:</p>
+                    <p class="modal-real-content-goals-content">
+                      Provide a central location for IT professionals to store and share all their personal websites, projects, Github, and more.
+                      Increase exposure and connectivity of IT professionals through the developers page.
+                      Enable users to easily edit and manage their links, including visibility options and thumbnails.
+                    </p>
+                    <p class="modal-real-content-goals-title">Achievements:</p>
+
+                    <p class="modal-real-content-goals-content">
+                      Created a revolutionary new platform for IT professionals to store and share all their personal websites, projects, Github, and more.
+                      Designed the developers page to increase the exposure and connectivity of IT professionals.
+                      Developed an easy-to-use editing and management system for user links.
+                    </p>
+
+                  </div>
+
+                  <div class="modal-real-content-secondVideo">
+
+                  </div>
+
+                  <div class="modal-real-content-flow">
+                    <img src="./imags/user-flow.png"/>
+                  </div>
+
+                  <div class="modal-real-content-twoDevices">
+                    <img src="./imags/two-devices.png"/>
+
+                  </div>
+
+                  <div class="modal-real-content-end">
+                    <img src="./imags/iPhone8.png"/>
+                  </div>
+
+                </div>
+              </div>
+
+            <!-- modal bottom -->
+            <div class="modal-footer">
+              <button type="button" class="modal-footer-btn"><p>Build my own website</p></button>
+            </div>
+          </div>
+        </div>
       </div>
- 
-      <!-- modal main body -->
-      <div class="modal-body">
-        Content
-      </div>
- 
-      <!-- modal bottom -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
- 
     </div>
-  </div>
-</div>
-
-
-    </div>
-
-    
 
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
      <script src="swiper-bundle.min.js"></script>
-
-     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-      });
-  </script>
+     <script src="javascript.js"></script>
 
   </body>
 </html>

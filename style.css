@@ -1,4 +1,21 @@
-body{
+@charset "UTF-8";
+/**
+ * This mixin is used to create a button style with a gradient border.
+ * @param {string} $padding - 按钮内部的内边距，用于控制按钮尺寸。
+ * @param {string} $border-radius - 按钮的边框圆角半径。
+ * @param {string} $border-width - 按钮的边框宽度。
+ * @param {color} $border-color - 按钮的渐变边框颜色。
+ * @param {color} $button-background - 按钮的背景颜色。
+ * @param {shadow} $box-shadow - 按钮的阴影效果。
+ */
+/**
+ * This Mixin is to add variant effects to text styles.
+ * @param {number} $font-size - 字体大小，默认为24px
+ * @param {string} $font-family - 字体类型，默认为'Alexandria'
+ * @param {number} $font-weight - 字体粗细，默认为500
+ * @param {string} $variant - 字体变体，可选值为'gradient'或'white'，默认为'gradient'
+ */
+body {
   height: 900px;
   width: 1440px;
   background-color: #100524;
@@ -9,23 +26,19 @@ body{
   font-family: "Alexandria";
   src: url("./fonts/Alexandria-Regular.ttf");
 }
-
 @font-face {
   font-family: "Alexandria-Bold";
   src: url("./fonts/Alexandria-Bold.ttf");
 }
-
 @font-face {
   font-family: "KaushanScript";
   src: url("./fonts/KaushanScript-Regular.otf");
 }
-
-
-.container-fluid{
+.container-fluid {
   position: relative;
 }
 
-.cover-left{
+.cover-left {
   position: absolute;
   height: 900px;
   width: 450px;
@@ -35,7 +48,7 @@ body{
   background: linear-gradient(90deg, #100524 35.42%, rgba(16, 5, 36, 0) 100%);
 }
 
-.cover-right{
+.cover-right {
   position: absolute;
   height: 900px;
   width: 450px;
@@ -45,65 +58,65 @@ body{
   background: linear-gradient(-90deg, #100524 35.42%, rgba(16, 5, 36, 0) 100%);
 }
 
-.title{
+.title {
   margin-top: 68px;
 }
 
-.swiper_button{
+.swiper_button {
   height: 50px;
   width: 50px;
   color: #cbc1c1;
 }
 
-.content{
+.content {
   margin-top: 56px;
 }
 
-.swiper-button-disabled{
-  opacity:0.4;
+.swiper-button-disabled {
+  opacity: 0.4;
 }
 
-.control-button-row{
+.control-button-row {
   margin-top: 50px;
 }
 
-.control-button-col{
+.control-button-col {
   position: relative;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
   position: absolute;
   margin-left: 5%;
 }
 
-.swiper-button-next{
+.swiper-button-next {
   position: absolute;
   margin-left: 15%;
 }
 
-.slide-content{
+.slide-content {
   width: 436px;
   height: 500px;
   background: #221834;
   border: 2px solid rgba(157, 79, 255, 0.4);
   border-radius: 20px;
-  margin: 20px;
+  margin: 26px;
 }
 
-.slide-content-mainImg{
+.slide-content-mainImg {
   width: 396px;
   height: 140px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .slide-content-mainImg img {
   height: 100%;
 }
 
-.slide-content-littleImg{
+.slide-content-littleImg {
   width: 396px;
   height: 120px;
   margin-top: 12px;
@@ -111,164 +124,239 @@ body{
   margin-right: auto;
 }
 
-.slide-content-littleImg img{
+.slide-content-littleImg img {
   height: 100%;
 }
 
-.slide-content-words{
+.slide-content-words {
   margin-top: 15.43px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.slide-content-words-title{
-font-family: 'Alexandria';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 32px;
-
-text-align: center;
-
-color: #FFFFFF;
-text-align: left;
+.slide-content-words-title {
+  font-family: "Alexandria";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+  text-align: left;
 }
 
-.slide-content-words-intro{
-  font-family: 'Alexandria';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-height: 40PX;
-
-color: #C6C6C6;
+.slide-content-words-intro {
+  font-family: "Alexandria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  height: 40PX;
+  color: #C6C6C6;
 }
 
-.slide-content-button{
-  position: relative;
+.slide-content-button {
   width: 397px;
-  height: 64px;
-  border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(276.36deg, rgba(249, 165, 18, 0.7) 8.86%, rgba(210, 79, 38, 0.7) 36.99%, rgba(164, 64, 169, 0.7) 66.77%, rgba(157, 79, 255, 0.7) 91.22%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide-content-button-grey{
-  position:absolute;
-  width: 393px;
-  height: 60px;
-  border-radius: 20px;
-  background-color: #221834;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.slide-content-button-grey p{
-  margin: 0;
-  font-family: 'Alexandria';
-font-style: normal;
-font-weight: 550;
-font-size: 24px;
-line-height: 32px;
-/* identical to box height, or 133% */
-text-align: center;
-vertical-align:auto;
-background: linear-gradient(99.74deg, #F9A512 1.29%, #D24F26 43.21%, #A440A9 72.48%, #9D4FFF 96.03%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-color: transparent;
-}
-
-.slide-content:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-  border: 3px solid #9D4FFF;
-}
-
-.modal-content{
-  background: transparent;
-}
-
-.close{
-  color: white;
-}
-
-.modal-header{
-  border-bottom:0px;
-}
-
-.modal-real-content{
-  background-color: white;
-  width: 1024px;
   margin: 0 auto;
 }
 
-.modal-real-content-intro{
+.slide-content-button button {
+  position: relative;
+  padding: 24px 48px;
+  border: none;
+  background-image: linear-gradient(to left, #f9a512, #d24f26, #a440a9, #9d4fff);
+  border-radius: 20px;
+  z-index: 1;
+  width: 397px;
+  height: 64px;
+  padding: 0;
+}
+.slide-content-button button::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  border-radius: 20px;
+  background-color: #1f1531;
+}
+
+.slide-content-button-text {
+  font-size: 24px;
+  font-family: "Alexandria";
+  font-weight: 500;
+  color: transparent;
+  background: linear-gradient(to right, #f9a512, #9d4fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.slide-content:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  border: 3px solid #9D4FFF;
+  box-shadow: 0 0 10px 5px rgba(136, 51, 243, 0.26);
+}
+
+.modal-content {
+  background: transparent;
+}
+
+.modal-header .close {
+  padding-right: 55px;
+}
+
+.close {
+  color: white;
+  font-weight: 0;
+  opacity: 1;
+}
+.close:hover {
+  color: white;
+}
+
+.modal-header {
+  border-bottom: 0px;
+}
+
+.modal-real-content {
+  background-color: white;
+  width: 1024px;
+  margin: 0 auto;
+  border-radius: 10% 10% 0 0;
+}
+
+.modal-real-content-intro {
   margin: 64px 80px;
 }
 
-.modal-real-content-firstVideo{
+.color_words {
+  font-family: "Alexandria-Bold";
+  background: linear-gradient(99.74deg, #F9A512 1.29%, #D24F26 43.21%, #A440A9 72.48%, #9D4FFF 96.03%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.modal-real-content-firstVideo {
   width: 100%;
-  height:414px;
+  height: 414px;
   background-color: #F3F3F3;
 }
 
-.modal-real-content-goals{
+.modal-real-content-firstVideo video {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.modal-real-content-goals {
   margin: 64px 80px;
 }
 
-.modal-real-content-secondVideo{
+.modal-real-content-secondVideo {
   width: 100%;
-  height:682px;
-  background-color: #16697a;
+  height: 682px;
+  padding-top: 122.33px;
+  background-color: #16697A;
 }
 
-.modal-real-content-flow{
+.bigVideo {
+  margin: 0 auto;
+  width: 684px;
+  height: 443px;
+  border: 6.54589px solid #2A3D4E;
+  border-radius: 14.7283px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.modal-real-content-flow {
   margin: 64px 40px;
-
 }
 
-.modal-real-content-flow img{
+.modal-real-content-flow img {
   width: 100%;
 }
 
-.modal-real-content-twoDevices img{
-  width: 100%;
+.modal-real-content-twoDevices {
+  background-color: #F3F3F3;
+  width: 1024px;
+  height: 600px;
+  position: relative;
 }
 
-.modal-real-content-end{
+.twoDevices-computer {
+  position: absolute;
+  top: 51.11px;
+  width: 517.23px;
+  height: 493.18px;
+  background-image: url(./imags/computer.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+#modal_videoleft {
+  margin-top: 20px;
+  margin-left: -7px;
+}
+
+.twoDevices-laptop {
+  position: absolute;
+  bottom: 51.25px;
+  right: 0;
+  width: 525px;
+  height: 325.72px;
+  background-image: url(./imags/laptop.png);
+  background-size: cover;
+}
+
+#modal_videoright {
+  margin-top: 21px;
+  margin-left: 72px;
+}
+
+.modal-real-content-end {
   width: 100%;
   height: 414px;
   background-color: #db6400;
+  padding-top: 40px;
 }
 
-.modal-real-content-end img{
-  margin: 40px 431px;
+.iphone8 {
+  width: 162.49px;
+  height: 333.57px;
+  background-image: url("./imags/iPhone8.png");
+  margin: 0 auto;
+  padding-top: 42px;
 }
 
-.modal-footer{
+.modal-footer {
   border: 0px;
 }
 
-.modal-body{
+.modal-body {
   padding: 0;
-}
-.modal-footer{
-  padding: 0;
-  width: 100%;
-  background-color: rgb(9,2,15);
 }
 
-.modal-footer-btn{
-  font-family: 'Alexandria';
+.modal-footer {
+  padding: 0;
+  width: 100%;
+  background-color: #09020f;
+}
+
+.modal-footer-btn {
+  position: relative;
+  padding: 24px 48px;
+  border: none;
+  background-image: linear-gradient(to left, #f9a512, #d24f26, #a440a9, #9d4fff);
+  border-radius: 20px;
+  z-index: 1;
+  font-family: "Alexandria";
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
@@ -276,58 +364,112 @@ color: transparent;
   width: 380px;
   height: 80px;
   margin: 64px auto;
-  border: 3px solid transparent;
+  box-shadow: 0 0 10px 5px rgba(136, 51, 243, 0.26);
+  transition: transform 0.6s ease-in-out;
+}
+.modal-footer-btn::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
   border-radius: 20px;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box,border-box;
-  background-image: linear-gradient(to right, #100524, #100524), linear-gradient(to right, #9D4FFF, #A440A9, #D24F26, #F9A512);
+  background-color: #1f1531;
 }
 
-.modal-footer-btn p{
+.modal-footer-btn p {
   margin-bottom: 0;
   background: linear-gradient(99.74deg, #F9A512 1.29%, #D24F26 43.21%, #A440A9 72.48%, #9D4FFF 96.03%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.modal-real-content-intro-title{
-  font-family: 'Alexandria-Bold';
-font-weight: 700;
-font-size: 24px;
-line-height: 32px;
-color: #262626;
+.modal-footer-btn:hover {
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
-.modal-real-content-intro-content{
-  font-family: 'Alexandria';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-
-letter-spacing: -0.02em;
-
-color: #262626;
-}
-
-.modal-real-content-goals-title{
-  font-family: 'Alexandria-Bold';
+.modal-real-content-intro-title {
+  font-family: "Alexandria-Bold";
   font-weight: 700;
   font-size: 24px;
   line-height: 32px;
   color: #262626;
 }
 
-.modal-real-content-goals-content{
-  font-family: 'Alexandria';
+.modal-real-content-intro-content {
+  font-family: "Alexandria";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  
   letter-spacing: -0.02em;
-  
   color: #262626;
 }
+
+.modal-real-content-goals-title {
+  font-family: "Alexandria-Bold";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #262626;
+}
+
+.modal-real-content-goals-content {
+  font-family: "Alexandria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #262626;
+}
+
+.modal-content {
+  border: 0;
+}
+
+.modal-header-words {
+  margin-left: 42px;
+}
+
+.modal-header-title {
+  font-family: "Alexandria";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+  color: #FFFFFF;
+}
+
+.modal-header-des {
+  font-family: "Alexandria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #C6C6C6;
+}
+
+.modal-content {
+  margin-top: 70px;
+}
+
+.player-5 {
+  width: 140px;
+  height: 248px;
+  margin: 0 auto;
+}
+.player-5div {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

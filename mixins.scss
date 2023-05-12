@@ -1,0 +1,62 @@
+/**
+ * This mixin is used to create a button style with a gradient border.
+ * @param {string} $padding - 按钮内部的内边距，用于控制按钮尺寸。
+ * @param {string} $border-radius - 按钮的边框圆角半径。
+ * @param {string} $border-width - 按钮的边框宽度。
+ * @param {color} $border-color - 按钮的渐变边框颜色。
+ * @param {color} $button-background - 按钮的背景颜色。
+ * @param {shadow} $box-shadow - 按钮的阴影效果。
+ */
+@mixin my_button(
+	$padding: 24px 48px,
+	$border-radius: 20px,
+	$border-width: 1px,
+	$border-color: linear-gradient(to left, #f9a512, #d24f26, #a440a9, #9d4fff),
+	$button-background: #1f1531,
+	$box-shadow: 0 0 10px 5px rgba(136, 51, 243, 0.16)
+) {
+	position: relative;
+	padding: $padding;
+	border: none;
+	background-image: $border-color;
+	border-radius: $border-radius;
+	z-index: 1;
+	&::before {
+		content: '';
+		z-index: -1;
+		position: absolute;
+		top: $border-width;
+		bottom: $border-width;
+		left: $border-width;
+		right: $border-width;
+		border-radius: $border-radius;
+		background-color: $button-background;
+	}
+}
+
+/**
+ * This Mixin is to add variant effects to text styles.
+ * @param {number} $font-size - 字体大小，默认为24px
+ * @param {string} $font-family - 字体类型，默认为'Alexandria'
+ * @param {number} $font-weight - 字体粗细，默认为500
+ * @param {string} $variant - 字体变体，可选值为'gradient'或'white'，默认为'gradient'
+ */
+@mixin my_text(
+	$font-size: 24px,
+	$font-family: 'Alexandria',
+	$font-weight: 500,
+	$variant: 'gradient'
+) {
+	font-size: $font-size;
+	font-family: $font-family;
+	font-weight: $font-weight;
+	@if $variant == 'gradient' {
+		color: transparent;
+		background: linear-gradient(to right, #f9a512, #9d4fff);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	} @else if $variant == 'white' {
+		color: white;
+	}
+}

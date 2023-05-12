@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="swiper.min.css"/>
     <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
   </head>
 
   <body>
@@ -45,12 +47,8 @@
                     </p>
                   </div>
 
-                  <div class="slide-content-button slide-content-button-viewable">
-                    <div class="slide-content-button-grey">
-                      <p>
-                        View Product
-                      </p>
-                    </div>
+                  <div class="slide-content-button">
+                    <button><p class="slide-content-button-text">View Product</p></button>
                   </div>
                 </div>
               </div>
@@ -75,12 +73,8 @@
                     </p>
                   </div>
 
-                  <div class="slide-content-button" data-toggle="modal" data-target="#">
-                    <div class="slide-content-button-grey">
-                      <p>
-                        In Process
-                      </p>
-                    </div>
+                  <div class="slide-content-button">
+                    <button><p class="slide-content-button-text">In Process</p></button>
                   </div>
                 </div>
               </div>
@@ -105,12 +99,8 @@
                     </p>
                   </div>
 
-                  <div class="slide-content-button" data-toggle="modal" data-target="#">
-                    <div class="slide-content-button-grey">
-                      <p>
-                        In Process
-                      </p>
-                    </div>
+                  <div class="slide-content-button">
+                    <button><p class="slide-content-button-text">In Process</p></button>
                   </div>
                 </div>
               </div>
@@ -139,9 +129,14 @@
           <div class="modal-content">
 
             <div class="modal-header">
-              <h4 class="modal-title">The Title<ul class="list-inline">
-              </ul></h4>
-              <button type="button" class="close" data-dismiss="modal">X</button>
+              <div class="modal-header-words">
+                <div class="modal-header-title">LinkDev</div>
+              
+                <div class="modal-header-des">The Ultimate Link Collection Website Designed for IT Professionals</div>
+
+              </div>
+              
+              <button type="button" class="close" data-dismiss="modal"><img src="./imags/close.png" alt="close"></button>
             </div>
 
 
@@ -157,7 +152,7 @@
                       Introducing LinkDev: The Ultimate Link Collection Website for IT Professionals: 
                     </p>
                     <p class="modal-real-content-intro-content">
-                      LinkDev is a revolutionary new platform for IT professionals, created from scratch by Ekpyrotic Universe from October to December 2022. It's a link collection website designed specifically for developers and devops, as well as anyone working in the IT industry.
+                      LinkDev is a revolutionary new platform for IT professionals, created from scratch by <span class="color_words">Ekpyrotic Universe</span> from October to December 2022. It's a link collection website designed specifically for developers and devops, as well as anyone working in the IT industry.
                     </p>
                     <p class="modal-real-content-intro-content">
                       With LinkDev, all IT professionals can collect all their personal websites, projects, portfolios, Github, UI designs, and more, all in one place. When someone clicks on a LinkDev link from an external website, they will be directed to the user's profile on LinkDev, which includes their title, name, contact information, personal experience, all the links they want to share, and their own uploaded avatar and profile background.
@@ -168,6 +163,9 @@
                   </div>
 
                   <div class="modal-real-content-firstVideo">
+                    <video muted id="modal_video1" class="" height="100%" loop autoplay>
+                      <source src="./video/video1.mp4" type="video/mp4"/>
+                    </video>
 
                   </div>
 
@@ -189,7 +187,9 @@
                   </div>
 
                   <div class="modal-real-content-secondVideo">
-
+                    <div class="bigVideo">
+                      <div id="player2" class="player-2"></div>
+                    </div>
                   </div>
 
                   <div class="modal-real-content-flow">
@@ -197,12 +197,27 @@
                   </div>
 
                   <div class="modal-real-content-twoDevices">
-                    <img src="./imags/two-devices.png"/>
+                    <div class="twoDevices-computer">
+                      <video muted id="modal_videoleft" class="" height="320px" loop autoplay>
+                        <source src="./video/videoleft.mp4" type="video/mp4"/>
+                      </video>
+                    </div>
+
+                    <div class="twoDevices-laptop">
+                      <video muted id="modal_videoright" class="" height="270px" loop autoplay>
+                        <source src="./video/videoright.mp4" type="video/mp4"/>
+                      </video>
+
+                    </div>
+
+                  
 
                   </div>
 
                   <div class="modal-real-content-end">
-                    <img src="./imags/iPhone8.png"/>
+                    <div class="iphone8">
+                      <div id="player5" class="player-5"></div>
+                    </div>
                   </div>
 
                 </div>
@@ -221,7 +236,28 @@
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
      <script src="swiper-bundle.min.js"></script>
-     <script src="javascript.js"></script>
 
+     <script src="javascript.js"></script>
+      
+      <script>
+        var player = new Clappr.Player({
+          source: "./video/DeveloperMobile.gif", 
+          parentId: "#player5",
+          width:"100%",
+          height:"250px"
+        });
+
+        var player2 = new Clappr.Player({
+          source: "./video/video2.mp4", 
+          parentId: "#player2",
+          width:"684px",
+          height:"437.76px",
+          mediacontrol:{seekbar:"#16697A"}
+        });
+
+      
+
+        
+      </script>
   </body>
 </html>

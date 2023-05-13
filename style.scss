@@ -30,7 +30,7 @@ body{
 .cover-left{
   position: absolute;
   height: 900px;
-  width: 450px;
+  width: 500px;
   left: 0px;
   top: 0px;
   z-index: 9;
@@ -40,7 +40,7 @@ body{
 .cover-right{
   position: absolute;
   height: 900px;
-  width: 450px;
+  width: 490px;
   right: 0px;
   top: 0px;
   z-index: 9;
@@ -138,13 +138,13 @@ text-align: left;
 
 .slide-content-words-intro{
   font-family: 'Alexandria';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-height: 40PX;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  height: 40PX;
 
-color: #C6C6C6;
+  color: #C6C6C6;
 }
 
 .slide-content-button{
@@ -160,6 +160,7 @@ color: #C6C6C6;
 
 .slide-content-button-text{
 	@include my_text;
+  font-family: 'Alexandria-Bold';
 	margin: 0;
 }
 
@@ -238,7 +239,7 @@ color: #C6C6C6;
 
 .bigVideo{
   margin: 0 auto;
-  width:684px;
+  width:695px;
   height:443px;
   border:6.54589px solid #2A3D4E;
   border-radius: 14.7283px;

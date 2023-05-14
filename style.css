@@ -336,17 +336,15 @@ body {
   padding-top: 42px;
 }
 
-.modal-footer {
-  border: 0px;
-}
-
 .modal-body {
   padding: 0;
 }
 
 .modal-footer {
+  border: 0px;
   padding: 0;
   width: 100%;
+  padding-bottom: 200px;
   background-color: #09020f;
 }
 

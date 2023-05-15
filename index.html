@@ -4,30 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Products</title>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
-
-
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="swiper.min.css"/>
     <link rel="stylesheet" href="style.css">
-
-    
   </head>
 
   <body>
+    <!-- bootstrap overall container -->
     <div class="container-fluid">
-      <!-- the title : "Our Products" -->
+      <!-- 标题图片 : "Our Products" -->
       <div class="row title">
         <div class="col-2 offset-5">
           <img src="./imags/title.PNG"/>
         </div>
       </div>
 
-      <!-- the slide content-->
+      <!-- 滑块部分开始 -->
+      <!-- bootstrap 第一个row, 内容为滑块卡片内容 -->
       <div class="row content">
+        <!-- 一个 bootstrap row 中仅有这一个col -->
         <div class="col">
+          <!-- swiper overall container -->
           <div #swiperRef="" class="swiper mySwiper">
             <div class="swiper-wrapper">
               <!-- the first slide -->
@@ -55,6 +54,7 @@
                   </div>
                 </div>
               </div>
+              <!-- the first slide end -->
 
               <!-- the second slide -->
               <div class="swiper-slide"> 
@@ -81,6 +81,7 @@
                   </div>
                 </div>
               </div>
+              <!-- the second slide end -->
 
               <!-- the third slide -->
               <div class="swiper-slide"> 
@@ -107,41 +108,41 @@
                   </div>
                 </div>
               </div>
+              <!-- the third slide end -->
 
             </div>
           </div>
         </div>
       </div>
 
-      <!-- the slide control button-->
+      <!-- bootstrap 第一个row, 内容为左右control button-->
       <div class="row control-button-row">
         <div class="col offset-5 control-button-col">
           <div class="swiper-button-prev"><img src="imags/left.png"/></div>
           <div class="swiper-button-next"><img src="imags/right.png"/></div>
         </div>
-
       </div>
+      <!-- 滑块部分结束 -->
 
-      <!-- the left and right cover-->
+      <!-- 左右两个渐变遮罩 -->
       <div class="cover-left"></div>
       <div class="cover-right"></div>
 
-      <!-- Slide1-Modal -->
+      <!-- pop up 弹出框1 内容 -->
       <div class="modal fade" id="slide1-modal">
         <div class="modal-dialog modal-xl modal-dialog-centered">
           <div class="modal-content">
 
+            <!-- pop up 弹出框 header -->
             <div class="modal-header">
+              <!-- pop up 弹出框 header 标题-->
               <div class="modal-header-words">
                 <div class="modal-header-title">LinkDev</div>
-              
                 <div class="modal-header-des">The Ultimate Link Collection Website Designed for IT Professionals</div>
-
               </div>
-              
+              <!-- pop up 弹出框 header 关闭按钮-->
               <button type="button" class="close" data-dismiss="modal"><img src="./imags/close.png" alt="close"></button>
             </div>
-
 
             <!-- modal main body -->
               <div class="modal-body">
@@ -169,7 +170,6 @@
                     <video muted id="modal_video1" class="" height="100%" loop autoplay>
                       <source src="./video/video1.mp4" type="video/mp4"/>
                     </video>
-
                   </div>
 
                   <div class="modal-real-content-goals">
@@ -180,13 +180,11 @@
                       Enable users to easily edit and manage their links, including visibility options and thumbnails.
                     </p>
                     <p class="modal-real-content-goals-title">Achievements:</p>
-
                     <p class="modal-real-content-goals-content">
                       Created a revolutionary new platform for IT professionals to store and share all their personal websites, projects, Github, and more.
                       Designed the developers page to increase the exposure and connectivity of IT professionals.
                       Developed an easy-to-use editing and management system for user links.
                     </p>
-
                   </div>
 
                   <div class="modal-real-content-secondVideo">
@@ -210,11 +208,7 @@
                       <video muted id="modal_videoright" class="" height="270px" loop autoplay>
                         <source src="./video/videoright.mp4" type="video/mp4"/>
                       </video>
-
                     </div>
-
-                  
-
                   </div>
 
                   <div class="modal-real-content-end">
@@ -233,13 +227,16 @@
           </div>
         </div>
       </div>
+      <!-- pop up 弹出框1 end -->
     </div>
 
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-     <script src="swiper-bundle.min.js"></script>
-     <script src="javascript.js"></script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- Clappr video plugin JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+    <script src="javascript.js"></script>
   </body>
 </html>

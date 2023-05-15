@@ -1,3 +1,4 @@
+// Swiper滑动块初始化
 document.addEventListener('DOMContentLoaded', function () {
   var swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
@@ -10,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 });
 
+// Clappr视频播放插件初始化
+// pop up中第五个视频
 var player = new Clappr.Player({
   source: "./video/DeveloperMobile.gif", 
   parentId: "#player5",
@@ -17,6 +20,7 @@ var player = new Clappr.Player({
   height:"250px"
 });
 
+// pop up中第二个视频
 var player2 = new Clappr.Player({
   source: "./video/video2.mp4", 
   parentId: "#player2",
